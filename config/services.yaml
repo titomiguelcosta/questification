@@ -22,3 +22,14 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    _instanceof:
+        App\Generator\GeneratorInterface:
+            tags: ['app.generator']
+        App\Renderer\CommandLine\SymfonyStyleInterface:
+            tags: ['app.renderer.command_line']
+
+    App\CommandLineEngine:
+        arguments:
+            - !tagged_iterator { tag: 'app.generator' }
+            - !tagged_iterator { tag: 'app.renderer.command_line' }
