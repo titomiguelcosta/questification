@@ -39,12 +39,12 @@ class PsrExactAnswerGenerator implements GeneratorInterface
             '20' => 'Clock',
             '21' => 'Internationalization*',
             '22' => 'Application Tracing*',
-        ];        
+        ];
     }
 
     public function generate(?Category $category = null): ?QuestionInterface
     {
-        $this->questionsGenerated++;
+        ++$this->questionsGenerated;
 
         $unasked = array_diff(array_keys($this->data), $this->asked);
         $code = $unasked[array_rand($unasked)];
@@ -58,7 +58,7 @@ class PsrExactAnswerGenerator implements GeneratorInterface
 
     public function supportsCategory(Category $category): bool
     {
-        return $category === Category::PHP;
+        return Category::PHP === $category;
     }
 
     public function hasQuestions(?Category $category = null): bool

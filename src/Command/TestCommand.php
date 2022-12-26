@@ -37,12 +37,12 @@ class TestCommand extends Command
     {
         $this->io = new SymfonyStyle($input, $output);
         $this->engine->setSymfonyStyle($this->io);
-        
+
         foreach ($this->engine->renderers as $renderer) {
             if ($renderer instanceof SymfonyStyleInterface) {
                 $renderer->setSymfonyStyle($this->io);
             }
-        } 
+        }
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int

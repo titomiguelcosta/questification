@@ -2,7 +2,6 @@
 
 namespace App\Renderer\CommandLine;
 
-use App\Generator\HttpStatusCode\MultipleChoiceOneAnswerQuestion;
 use App\Question\ExactAnswerQuestion;
 use App\Question\QuestionInterface;
 use App\Renderer\RendererInterface;

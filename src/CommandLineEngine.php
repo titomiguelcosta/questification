@@ -22,7 +22,7 @@ class CommandLineEngine extends Engine
     public function end(array $questions): void
     {
         $rightAnswers = array_reduce(
-            $questions, 
+            $questions,
             fn (int $carry, QuestionInterface $question) => $carry + ($question->isAnswerCorrect() ? 1 : 0),
             0
         );
@@ -31,7 +31,7 @@ class CommandLineEngine extends Engine
 
         foreach ($questions as $question) {
             if (!$question->isAnswerCorrect()) {
-                $this->io->error($question->getQuestion() . ' ' . $question->getCorrectAnswer());
+                $this->io->error($question->getQuestion().' '.$question->getCorrectAnswer());
             }
         }
     }

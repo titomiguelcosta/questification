@@ -69,7 +69,7 @@ abstract class Engine
                 if ($renderer->supports($question)) {
                     $questions[] = $question;
                     $renderer->render($question);
-                    
+
                     break;
                 }
             }
@@ -91,7 +91,7 @@ abstract class Engine
                 array_shift($this->generators);
             }
         } else {
-            /** @var GeneratorInterface */
+            /* @var GeneratorInterface */
             foreach ($this->generators as $potentialGenerator) {
                 if ($potentialGenerator->supportsCategory($category) && $potentialGenerator->hasQuestions($category)) {
                     $generator = $potentialGenerator;

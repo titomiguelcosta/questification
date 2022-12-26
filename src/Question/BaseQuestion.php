@@ -13,11 +13,10 @@ abstract class BaseQuestion implements QuestionInterface
     {
     }
 
-    public function getQuestion(): string 
+    public function getQuestion(): string
     {
         return $this->question;
     }
-
 
     public function setCategory(Category $category): void
     {
@@ -29,11 +28,10 @@ abstract class BaseQuestion implements QuestionInterface
         return $this->category ?? Category::UNKNOWN;
     }
 
-    public function getCorrectAnswer(): string 
+    public function getCorrectAnswer(): string
     {
         return $this->correctAnswer;
     }
-
 
     public function getAnswer(): ?string
     {

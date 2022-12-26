@@ -23,7 +23,7 @@ class HttpStatusCodeGenerator implements GeneratorInterface
 
     public function generate(?Category $category = null): ?QuestionInterface
     {
-        $this->questionsGenerated++;
+        ++$this->questionsGenerated;
 
         $unasked = array_diff($this->statusCodes, $this->asked);
         $code = $unasked[array_rand($unasked)];
@@ -47,7 +47,7 @@ class HttpStatusCodeGenerator implements GeneratorInterface
             shuffle($choices);
             $question->setChoices($choices);
         }
-        
+
         $question->setCategory(Category::HTTP);
 
         return $question;
@@ -55,7 +55,7 @@ class HttpStatusCodeGenerator implements GeneratorInterface
 
     public function supportsCategory(Category $category): bool
     {
-        return $category === Category::HTTP;
+        return Category::HTTP === $category;
     }
 
     public function hasQuestions(?Category $category = null): bool

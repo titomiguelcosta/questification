@@ -19,12 +19,12 @@ class MultipleChoiceOneAnswerQuestionRenderer implements RendererInterface, Symf
         $choices = $question->getChoices();
         foreach ($choices as $choice) {
             $this->io->text(sprintf('%s) %s', $i, $choice));
-            $i++;
+            ++$i;
         }
 
         $answer = (int) $this->io->ask('Your answer');
 
-        $question->setAnswer((string ) ($choices[$answer - 1] ?? ''));
+        $question->setAnswer((string) ($choices[$answer - 1] ?? ''));
     }
 
     public function supports(QuestionInterface $question): bool
