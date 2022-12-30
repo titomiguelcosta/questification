@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Generator\HttpStatusCode;
+namespace App\Generator\HTTP;
 
 class HttpStatusCodes
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Generator\Psr;
+namespace App\Generator\PHP;
 
 use App\Category;
 use App\Generator\GeneratorInterface;
