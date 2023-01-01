@@ -2,8 +2,6 @@
 
 namespace App\Question;
 
-use PDO;
-
 class MultipleChoiceMultipleAnswersQuestion extends BaseQuestion implements MultipleChoiceQuestionInterface
 {
     private $choices = [];

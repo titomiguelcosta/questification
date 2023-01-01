@@ -10,7 +10,7 @@ class TraitOrderLastTest extends TestCase
     public function testOutput(): void
     {
         $trait = new TraitOrderLast();
-        
+
         self::assertSame('hello from class', $trait->hello());
     }
 }

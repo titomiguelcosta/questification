@@ -2,7 +2,7 @@
 
 namespace App\Examples\PHP\Trait;
 
-class TraitOrderFirst 
+class TraitOrderFirst
 {
     use ExampleTrait;
 

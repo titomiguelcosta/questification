@@ -24,7 +24,7 @@ class MultipleChoiceMultipleAnswersQuestionRenderer extends MultipleChoiceOneAns
         $answer = $this->io->ask('Your answer');
 
         $answers = array_map(
-            function ($key) use ($choices): string { return (string) ($choices[$key - 1] ?? ''); }, 
+            function ($key) use ($choices): string { return (string) ($choices[$key - 1] ?? ''); },
             explode(',', $answer)
         );
 

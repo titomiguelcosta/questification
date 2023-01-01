@@ -10,7 +10,7 @@ class TraitOrderFirstTest extends TestCase
     public function testOutput(): void
     {
         $trait = new TraitOrderFirst();
-        
+
         self::assertSame('hello from class', $trait->hello());
     }
 }

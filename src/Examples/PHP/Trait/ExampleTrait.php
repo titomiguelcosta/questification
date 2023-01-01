@@ -2,7 +2,7 @@
 
 namespace App\Examples\PHP\Trait;
 
-trait ExampleTrait 
+trait ExampleTrait
 {
     public function hello(): string
     {

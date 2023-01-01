@@ -25,7 +25,7 @@ abstract class BaseQuestion implements QuestionInterface
 
     public function getCategory(): Category
     {
-        return $this->category ?? Category::UNKNOWN;
+        return $this->category ?? Category::Unknown;
     }
 
     public function getCorrectAnswer(): string

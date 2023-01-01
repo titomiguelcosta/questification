@@ -61,14 +61,14 @@ class AutoconfigurationGenerator implements GeneratorInterface
         $ask = sprintf('What is the tag that gets added to instances of "%s"?', $class);
 
         $question = new ExactAnswerQuestion($ask, $this->data[$class]);
-        $question->setCategory(Category::CONTAINER);
+        $question->setCategory(Category::Container);
 
         return $question;
     }
 
     public function supportsCategory(Category $category): bool
     {
-        return Category::CONTAINER === $category;
+        return Category::Container === $category;
     }
 
     public function hasQuestions(?Category $category = null): bool
