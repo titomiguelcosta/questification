@@ -26,9 +26,9 @@ class ImmutableEventDispatcherGenerator implements GeneratorInterface
 
         $question = new MultipleChoiceOneAnswerQuestion($ask, 'BadMethodCallException');
         $question->setChoices($choices);
+        $question->setCategory(Category::EVENT_DISPATCHER);
 
         $this->asked = true;
-        $question->setCategory(Category::EVENT_DISPATCHER);
 
         return $question;
     }
